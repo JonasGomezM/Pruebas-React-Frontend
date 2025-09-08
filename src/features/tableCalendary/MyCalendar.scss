@@ -1,0 +1,101 @@
+.calendar-container {
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+// Encabezado con 1 columna fija + 7 columnas
+.custom-header {
+  display: grid;
+  grid-template-columns: 200px repeat(7, 1fr);
+  border-bottom: 2px solid #e0e0e0;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  .day-cell {
+    text-align: center;
+    padding: 6px 4px;
+    border-left: 1px solid #e0e0e0;
+
+    .day-name {
+      font-size: 0.75rem;
+      color: #6c757d;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .day-number {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #212529;
+    }
+    .month-year {
+      font-size: 0.7rem;
+      color: #6c757d;
+    }
+  }
+
+  .unidad-header {
+    background: #f8f9fa;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #ddd;
+  }
+}
+
+// Columna izquierda UNIDAD fija
+.vis-labelset {
+  background: #f8f9fa;
+  position: sticky;
+  left: 0;
+  z-index: 5;
+  border-right: 1px solid #ddd;
+
+  .vis-label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    padding-left: 8px;
+  }
+}
+
+// Timeline
+.my-timeline {
+  height: 500px;
+  border: 1px solid #ddd;
+
+  .vis-item.custom-item {
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .siniestrado {
+    background-color: #f8d7da;
+    color: #a51d2d;
+  }
+  .cargado {
+    background-color: #cfe2ff;
+    color: #084298;
+  }
+  .vacio {
+    background-color: #fff3cd;
+    color: #664d03;
+  }
+  .mantenimiento {
+    background-color: #d1e7dd;
+    color: #0f5132;
+  }
+
+  .today-highlight {
+    background-color: #0062ff27 !important;
+  }
+}

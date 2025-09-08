@@ -1,0 +1,134 @@
+.schedule {
+  width: 90%;
+  font-family: Arial, Helvetica, sans-serif;
+  border: none;
+
+  &__header {
+    display: grid;
+    grid-template-columns: 200px repeat(7, 1fr);
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 4px rgba(0, 0, 0, 0.082);
+  }
+
+  &__unit-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    font-size: 0.9rem;
+    color: #0d1321;
+  }
+
+  &__day-header {
+    position: relative;
+    padding: 5px;
+
+    // Borde lateral medio para cada día
+    &::before {
+      content: "";
+      position: absolute;
+      top: 15%;
+      bottom: 15%;
+      left: 0;
+      width: 1px;
+      background: #ddd;
+    }
+
+    &:first-child::before {
+      display: none; // no borde en el primer día
+    }
+  }
+
+  &__day-header--today {
+    background-color: rgba(0, 112, 243, 0.08);
+    border-radius: 4px;
+  }
+
+  &__date {
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #211e0d;
+  }
+
+  &__day-month {
+    font-size: 0.7rem;
+    text-transform: capitalize;
+    color: #666;
+    margin-top: 2px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    border-bottom: 1px solid #ddd;
+  }
+
+  &__unit-cell {
+    border-right: 1px solid #ddd;
+    padding: 10px;
+    font-weight: bold;
+  }
+
+  &__days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    position: relative;
+  }
+
+  &__cell {
+    border: 1px solid #eee;
+    height: 50px;
+  }
+
+  &__event {
+    position: absolute;
+    top: 5px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    border-radius: 8px;
+    color: white;
+    font-size: 0.85rem;
+    z-index: 2;
+    font-weight: bold;
+  }
+
+  &__event-icon {
+    margin-left: 8px;
+  }
+
+  &__event--danger {
+    background-color: #ffebeb;
+    color: #ff0000;
+    border-left: 6px solid #ff0000;
+    
+  }
+  &__event--info {
+    background-color: #d9f0ff;
+    border-left: 6px solid #2980b9;
+    color: #2980b9;
+  }
+  &__event--warning {
+    background-color: #fff3c4;
+    color: #8b6600;
+    border-left: 6px solid #fab700;
+  }
+  &__event--success {
+    background-color: rgb(192, 255, 216);
+    border-left: 6px solid #19924b;
+    color: #19924b;
+  }
+}

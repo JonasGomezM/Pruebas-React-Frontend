@@ -1,0 +1,56 @@
+/* reset.scss */
+
+/* 1. Box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Eliminar márgenes y paddings por defecto */
+body,
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, figure,
+blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Quitar listas decorativas */
+ul, ol {
+  list-style: none;
+}
+
+/* 4. Eliminar subrayado y color por defecto en enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 5. Establecer fuentes base y altura */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: system-ui, sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* 6. Imágenes y medios no desborden */
+img, picture, video, canvas, svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* 7. Botones y formularios coherentes */
+input, button, textarea, select {
+  font: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* 8. Evitar scroll horizontal */
+html {
+  overflow-x: hidden;
+}
